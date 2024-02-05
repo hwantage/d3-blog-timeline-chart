@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>timeline</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/nouislider.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/HTimelineChart.css" />
+    <style>
+      #timelineWrapper {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+      }
+    </style>
+    <script src="./timeline_data.js"></script>
+  </head>
+  <body>
+    <div id="timelineWrapper" class="timeline"></div>
+
+    <script src="./lib/d3.min.js"></script>
+    <script src="./lib/underscore-min.js"></script>
+    <script src="./lib/nouislider.js"></script>
+    <script src="./lib/moment.js"></script>
+    <script src="./lib/moment-with-locales.js"></script>
+    <script src="./HTimelineChart.js"></script>
+    <script>
+      // 이미지 경로
+      var defaultImgRoot = "./assets/images/";
+
+      // 페이지 최초 로딩시에만 호출
+      moment.locale("ko");
+
+      var timeline = HTimelineChart.makeChart("timelineWrapper", {
+        ChartType: "TimeLine",
+        ChartTitle: "Post Timeline", // 챠트 상단 타이틀 설정
+        TimeSkipInterval: 0, // milliseconds (1시간=3600000)
+        TimeSkipTickInterval: 200, // TimeSkipTick 간격
+        TickInterval: 200, // 노드사이 간격
+        DateFormatType: "before", // normal/after/before
+        ChartData: timelineData,
+        Onload: function (chart) {
+          console.log("chart create.", chart);
+        },
+        NodeClick: function (node, nodeData) {
+          console.log(node);
+          console.log(nodeData);
+          window.open(nodeData["permalink"], "_blank");
+        },
+      });
+
+      timeline.scrollToTarget(timelineData.length - 1); // 챠트 포커스(스크롤) 이동
+    </script>
+  </body>
+</html>
