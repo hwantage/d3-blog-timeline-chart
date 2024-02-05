@@ -1,12 +1,12 @@
 
 ## d3-blog-timeline-chart
 
-![image](https://github.com/hwantage/d3-post-timeline-chart/assets/82494320/ac2a071e-e9db-4036-9f71-c8ad82e8ecc6)
+![image](https://github.com/hwantage/d3-blog-timeline-chart/assets/82494320/ac2a071e-e9db-4036-9f71-c8ad82e8ecc6)
 
 휴고 블로그의 sitemap 정보를 읽어들여 타임라인 차트로 생성하도록 하기위해 제작하였습니다.
 포스트와 포스트 사이의 시간 간격과 포스트가 언제 작성되었는지 상대 날짜로 확인이 가능합니다. 블로그 포스팅을 열심히 하라는 무언의 압박이...
 
-[live demo](https://hwantage.github.io/d3-post-timeline-chart/timeline.html)
+[live demo](https://hwantage.github.io/d3-blog-timeline-chart/timeline.html)
 
 [blog showcase](https://hwantage.github.io/posts/)
 
