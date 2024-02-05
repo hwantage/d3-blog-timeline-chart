@@ -1,5 +1,5 @@
 
-## d3-post-timeline-chart
+## d3-blog-timeline-chart
 
 ![image](https://github.com/hwantage/d3-post-timeline-chart/assets/82494320/ac2a071e-e9db-4036-9f71-c8ad82e8ecc6)
 
