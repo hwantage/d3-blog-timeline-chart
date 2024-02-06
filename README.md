@@ -11,7 +11,7 @@
 [blog showcase](https://hwantage.github.io/posts/)
 
 데이터는 다음과 같이 작성합니다.
-```js
+```javascript
 var timelineData = [
   {
     id: "0",
@@ -40,7 +40,7 @@ var timelineData = [
 ```
 
 ### Usage
-```html
+```javascript
 var timeline = HTimelineChart.makeChart("timelineWrapper", {
         ChartType: "TimeLine",
         ChartTitle: "Post Timeline", // 챠트 상단 타이틀 설정
